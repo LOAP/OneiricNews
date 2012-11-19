@@ -1,0 +1,30 @@
+   <div class="front_page_container">
+    <div class="front_page">
+      <div class="left_column"></div>
+      <div class="center_column"></div>
+      <div class="right_column">
+        <div style="text-align: center;font-size: 17px;margin-bottom: 15px;">COMMUNITY VOICE</div>
+        <div id="post_front_page">
+          <% @posts.each do |post| %>
+              <div class="post_front_page_title">
+                <span style="font-size: 15px;color: #808080;"><%= post.title %></span>
+              </div>
+              <div class="post_front_page_content2">
+          <span style="font-size: 12px;color: #808080;"><%= post.content %> <span style="font-size: 12px; color: black;">
+            <br /><br /></span></span>
+                <div class="posted_by_front_page_container">
+                  <div class="posted_by_front_page_image">
+                    <%= image_tag post.user.profile.image %>
+                  </div>
+                </div>
+                <div class="posted_by_front_page" style="font-size: 10px;">
+                  By: <%= link_to "#{post.user.name.upcase}", post.user.profile %> on: <%= post.created_at.strftime("%m/%d/%Y") %>
+                </div>
+              </div>
+              <br />
+          <% end %>
+          <%= will_paginate @posts %>
+        </div>
+      </div>
+    </div>
+   </div>
