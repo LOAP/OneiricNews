@@ -113,22 +113,29 @@ a.join:hover{color: #ffffff;
   text-decoration:none;
 }
                                                                             /*  BEGIN MAIN_CONTENT_CONTAINER  */
+
+
+
+
+
+
+
+
+
 div .main_content_container1 {
   width: 100%;
   height: auto;
   margin-top: 10px;
   background: blue;
-
-  background: transparent;
+  background: ransparent;
   display: block;
   vertical-align: baseline;
 }
 div .main_content_inner_container1 {
   width: 950px;
   height: auto;
-  background: transparent;
+  background: red;
   margin: 0 auto;
-
   filter: alpha(opacity=30);
   -moz-opacity: 0.3;
   -khtml-opacity: 0.3;
@@ -145,7 +152,7 @@ div .main_content_inner_container1_column1 {
   height: auto;
   margin-left: 20px;
   float: left;
-  background-color: transparent;
+  background-color: green;
   display: block;
   vertical-align: baseline;
 }
@@ -156,7 +163,7 @@ div .main_content_inner_container1_column2 {
   height: auto;
   margin-right: 30px;
   float: right;
-  background-color: transparent;
+  background-color: blue;
   display: block;
   vertical-align: baseline;
 }

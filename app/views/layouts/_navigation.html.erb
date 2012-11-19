@@ -1,5 +1,26 @@
-<%= link_to "Blank App", root_path, :class => 'brand' %>
+
 <ul class="nav">
+  <li>
+    <%= link_to 'Home', root_path %>
+  </li>
+  <li>
+    <%= link_to 'Politics' %>
+  </li>
+  <li>
+    <%= link_to 'Business' %>
+  </li>
+  <li>
+    <%= link_to 'Health' %>
+  </li>
+  <li>
+    <%= link_to 'Philosophy' %>
+  </li>
+  <li>
+    <%= link_to 'Phsycology' %>
+  </li>
+  <li>
+    <%= link_to 'Opinion' %>
+  </li>
   <% if user_signed_in? %>
     <li>
     <%= link_to 'Logout', destroy_user_session_path, :method=>'delete' %>        
