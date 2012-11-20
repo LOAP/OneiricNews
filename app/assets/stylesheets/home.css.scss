@@ -122,52 +122,49 @@ div .front_page_container {
   width: 100%;
   height: auto;
   margin-top: 10px;
-  background: blue;
-  background: ransparent;
+  background: transparent;
   display: block;
   vertical-align: baseline;
 }
 
 div .front_page {
   width: 950px;
-  height: 1000px;
+  height: auto;
   margin: auto;
-  background: orange;
-  background: ransparent;
+  background: transparent;
   display: block;
 
 }
 div .left_column {
-  width: 316px;
-  height: 1000px;
+  width: 250px;
+  height: auto;
   float: left;
+  margin-right: 5px;
   background: green;
-  background: ransparent;
+  background: transparent;
   display: block;
 
 }
 div .center_column {
-  width: 316px;
-  height: 1000px;
+  width: 402px;
+  height: auto;
   float: left;
   background: red;
-  background: ransparent;
+  background: transparent;
   display: block;
-
 }
 div .right_column {
   width: 316px;
-  height: 1000px;
+  height: auto;
   float: left;
-  background: aqua;
-  background: ransparent;
+  background: transparent;
   display: block;
 }
-                                            /*    BLOG POSTS       */
+                                            /*    BLOG POSTS (RIGHT COLUMN)       */
 
 
 div #post_front_page{
-  width: 300px;
+  width: 275px;
   height: auto;
   text-align: left;
   margin-left: 5px;
@@ -178,7 +175,7 @@ div #post_front_page{
 }
 
 div .post_front_page_title{
-  width: 300px;
+  width: 275px;
   height: auto;
   text-align: left;
   margin-left: 0px;
@@ -188,7 +185,7 @@ div .post_front_page_title{
   vertical-align: baseline;
 }
 div .post_front_page_content2{
-  width: 300px;
+  width: 275px;
   height: auto;
   text-align: left;
   margin-left: 0px;
@@ -215,13 +212,85 @@ div .posted_by_front_page_image{
   vertical-align: baseline;
 }
 div .posted_by_front_page{
-  width: 300px;
+  width: 275px;
   height: 20px;
   margin-left: 0px;
   background-color: transparent;
   display: block;
   vertical-align: baseline;
 }
+                                           /*  COVER STORIES   */
+div .cover_story_container {
+  width: 402px;
+  height: 600px;
+  float: left;
+  background: green;
+  background: ransparent;
+  display: block;
+}
+div .cover_story_image {
+  width: 402px;
+  height: 350px;
+  float: left;
+  background: red;
+  background: transparent;
+  display: block;
+}
+                                                /*  DEPARTMENTS   */
+
+                                              /*    DEPARTMENTS Thumbnail          */
 
 
+div .section_thumbnail_container{
+  height: 320px;
+  width: 250px;
+  float: left;
+  margin-right: 30px;
+  margin-bottom: 30px;
+  background-color: transparent;
+  moz-border-radius: 2px;
+  border-radius: 2px;
+  -moz-box-shadow: 0 0 5px #888;
+  -webkit-box-shadow: 0 0 5px#888;
+  box-shadow: 0 0 5px #888;
+}
+div .section_thumb_image{
+  height: 175px;
+  width: 250px;
+  margin-bottom: 10px;
+  float: left;
+  background-color: #add8e6;
+}
+div .section_thumb_name{
+  height: 30px;
+  width: 250px;
+  margin-left: 5px;
+  float: left;
+  background-color: transparent;
+}
+div .section_thumb_bio{
+  height: 60px;
+  width: 250px;
+  margin-left: 5px;
+  float: left;
+  background-color: transparent;
+}
+div .section_thumb_info_link{
+  height: 30px;
+  width: 250px;
+  text-align: center;
+  float: left;
+  background-color: transparent;
+  display: block;
+  vertical-align: baseline;
+}
+div .section_thumbnail_no_image{
+  width: 250px;
+  height: 20px;
+  float: left;
+  margin-top: 70px;
+  background-color: transparent;
+  display: block;
+  vertical-align: baseline;
+}
 

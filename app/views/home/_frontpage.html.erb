@@ -1,7 +1,86 @@
-   <div class="front_page_container">
-    <div class="front_page">
-      <div class="left_column"></div>
-      <div class="center_column"></div>
+ <div class="front_page_container">
+   <div class="front_page">
+
+
+
+
+      <div class="left_column">
+        <div style="text-align: center;font-size: 17px;margin-bottom: 15px;">
+          DEPARTMENTS
+        </div>
+
+
+        <!--  Art   -->
+        <div class="section_thumbnail_container">
+              <div class="section_thumb_image">
+                <% if @users.last.profile.image? %>
+                    <%= image_tag @users.last.profile.image_url.to_s %>
+                <% else %>
+                    <div class="section_thumbnail_no_image" style="text-align: center;">
+                      <strong>No image for <%= @users.last.name.capitalize %></strong>
+                    </div>
+                <% end %>
+              </div>
+              <div class="section_thumb_name">
+                <strong><%= @users.last.name %></strong>
+              </div>
+              <div class="section_thumb_bio">
+                <%= truncate(@users.last.bio.content, :length => 100) %> <br />
+              </div>
+              <div class="section_thumb_info_link">
+                <h5 style="color: orange;"><%= link_to 'View Full Profile', @users.last.bio %></h5>
+              </div>
+        </div>
+        <!--  Business   -->
+        <div class="section_thumbnail_container">
+          <div class="section_thumb_image">
+            <% if @users.last.profile.image? %>
+                <%= image_tag @users.last.profile.image_url.to_s %>
+            <% else %>
+                <div class="section_thumbnail_no_image" style="text-align: center;">
+                  <strong>No image for <%= @users.last.name.capitalize %></strong>
+                </div>
+            <% end %>
+          </div>
+          <div class="section_thumb_name">
+            <strong><%= @users.last.name %></strong>
+          </div>
+          <div class="section_thumb_bio">
+            <%= truncate(@users.last.bio.content, :length => 100) %> <br />
+          </div>
+          <div class="section_thumb_info_link">
+            <h5 style="color: orange;"><%= link_to 'View Full Profile', @users.last.bio %></h5>
+          </div>
+        </div>
+      </div>
+   </div>
+
+
+
+
+
+
+
+
+      <div class="center_column">
+        <div style="text-align: center;font-size: 17px;margin-bottom: 15px;">COVER STORY</div>
+       <div class="cover_story_container">
+        <div class="cover_story_image" >
+          <%= image_tag current_user.profile.image_url.to_s %>
+        </div>
+        <div class="cover_story_content">
+          <%= @users.third.bio.content %>
+        </div>
+       </div>
+      </div>
+
+
+
+
+
+
+
+
       <div class="right_column">
         <div style="text-align: center;font-size: 17px;margin-bottom: 15px;">COMMUNITY VOICE</div>
         <div id="post_front_page">
@@ -26,5 +105,8 @@
           <%= will_paginate @posts %>
         </div>
       </div>
-    </div>
    </div>
+</div>
+
+
+
