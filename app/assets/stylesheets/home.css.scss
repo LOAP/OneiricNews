@@ -31,18 +31,18 @@ div .slide_show {
   border-left: 0px solid #828288;
 }
 div .slide {
-  width: 900px;
+  width: 950px;
   height: 350px;
   margin: 0 auto;
   margin-top: 0px;
   padding-top: 30px;
-  margin-left: 20px;
+  margin-left: 0px;
   float:left;
   background-color: transparent;
   display: block;
   vertical-align: baseline;
 }
-.fadein { position:relative; width:900px; height:350px; }
+.fadein { position:relative; width:950px; height:350px; }
 .fadein img { position:absolute; left:0; top:0; }
                                                                               /*  BEGIN LIKE BAR   */
 div .social_media_container{

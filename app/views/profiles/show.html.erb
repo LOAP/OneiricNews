@@ -26,7 +26,7 @@
           <label class="radio_check"><input id="rdb3" type="radio" name="toggler" value="dashboard_nav_my_hives" />My ?'s</label>
         </div>
         <div class="dashboard_home_store">
-          <label class="radio_check"><input id="rdb5" type="radio" name="toggler" value="dashboard_nav_my_store" />My ?'s</label>
+          <label class="radio_check"><input id="rdb5" type="radio" name="toggler" value="dashboard_nav_art" />Art</label>
         </div>
         <!--   ADD/EDIT IMAGE       -->
         <% if can? :update, @profile %>
@@ -64,7 +64,8 @@
        <%= render 'profiles/groups' %>
       <!--  END    -->
       <!--  STORE           -->
-       <%= render 'profiles/store' %>
+       <%= render 'profiles/art' %>
+
       <!--  END    -->
     </div>
   </div>
@@ -73,7 +74,7 @@
     $(function() {
         $("[name=toggler]").each(function(i) {
             $(this).change(function(){
-                $('#nav-dashboard_nav_blog, #nav-dashboard_nav_friend, #nav-dashboard_nav_my_hives, #nav-dashboard_nav_my_store, #nav-dashboard_nav_groups, #form-difference').hide();
+                $('#nav-dashboard_nav_blog, #nav-dashboard_nav_friend, #nav-dashboard_nav_my_hives, #nav-dashboard_nav_art, #nav-dashboard_nav_groups, #form-difference').hide();
                 divId = 'nav-' + $(this).val();
                 $("#"+divId).show();
             });

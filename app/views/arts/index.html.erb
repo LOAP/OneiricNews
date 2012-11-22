@@ -1,0 +1,58 @@
+<h1>Listing arts</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Content</th>
+    <th>Image</th>
+    <th>User</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @arts.each do |art| %>
+  <tr>
+    <td><%= art.title %></td>
+    <td><%= art.content %></td>
+    <td><%= art.image %></td>
+    <td><%= art.user %></td>
+    <td><%= link_to 'Show', art %></td>
+    <td><%= link_to 'Edit', edit_art_path(art) %></td>
+    <td><%= link_to 'Destroy', art, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Art', new_art_path %>
+
+
+<h2>Find Friends</h2>
+<strong><p><%= link_to "Back", :back %></p></strong>
+<br />
+<br />
+<% @arts.each do |art| %>
+    <div class="hive_thumbnail_container">
+      <div class="hive_thumb_map">
+        <% if art.image? %>
+            <%= image_tag art.image_url.to_s %>
+        <% else %>
+            <div class="profile_thumbnail_no_image" style="text-align: center;">
+              <strong>No image for <%= art.title.capitalize %></strong>
+            </div>
+        <% end %>
+      </div>
+      <div class="hive_thumb_name">
+        <strong><%= art.title %></strong>
+      </div>
+      <div class="profile_thumb_bio">
+        <%= truncate(art.content, :length => 100) %> <br />
+      </div>
+      <div class="hive_thumb_info_link">
+        <h5 style="color: orange;"><%= link_to 'View Full Story', art %></h5>
+      </div>
+    </div>
+<% end %>
+</div>

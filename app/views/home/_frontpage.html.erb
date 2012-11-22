@@ -13,22 +13,22 @@
         <!--  Art   -->
         <div class="section_thumbnail_container">
               <div class="section_thumb_image">
-                <% if @users.last.profile.image? %>
-                    <%= image_tag @users.last.profile.image_url.to_s %>
+                <% if @arts.last.image? %>
+                    <%= image_tag @arts.last.image_url.to_s %>
                 <% else %>
                     <div class="section_thumbnail_no_image" style="text-align: center;">
-                      <strong>No image for <%= @users.last.name.capitalize %></strong>
+                      <strong>No image for <%= @arts.last.title.capitalize %></strong>
                     </div>
                 <% end %>
               </div>
               <div class="section_thumb_name">
-                <strong><%= @users.last.name %></strong>
+                <strong><%= @arts.last.title %></strong>
               </div>
               <div class="section_thumb_bio">
-                <%= truncate(@users.last.bio.content, :length => 100) %> <br />
+                <%= truncate(@arts.last.content, :length => 100) %> <br />
               </div>
               <div class="section_thumb_info_link">
-                <h5 style="color: orange;"><%= link_to 'View Full Profile', @users.last.bio %></h5>
+                <h5 style="color: orange;"><%= link_to 'View Full Profile', @arts.last %></h5>
               </div>
         </div>
         <!--  Business   -->
@@ -66,7 +66,7 @@
         <div style="text-align: center;font-size: 17px;margin-bottom: 15px;">COVER STORY</div>
        <div class="cover_story_container">
         <div class="cover_story_image" >
-          <%= image_tag current_user.profile.image_url.to_s %>
+          <%= image_tag @arts.first.image_url.to_s %>
         </div>
         <div class="cover_story_content">
           <%= @users.third.bio.content %>

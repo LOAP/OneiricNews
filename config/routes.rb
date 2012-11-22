@@ -1,4 +1,5 @@
 Rails3BootstrapDeviseCancan::Application.routes.draw do
+  resources :arts
   resources :bios
   resources :pages#, except: :show
   resources :friendships
@@ -12,6 +13,7 @@ Rails3BootstrapDeviseCancan::Application.routes.draw do
     resources :posts
     resources :profiles
     resources :bios
+    resources :arts
   end
   #get ':id', to: 'pages#show', as: :page
 end

@@ -1,0 +1,84 @@
+<div style="width: 100%">
+  <div style="margin: auto; width: 450px;">
+    <p style="text-align: center;font-size: 50px;"><%= link_to "Art", root_path, :class => 'brand' %></p>
+    <p style="text-align: center;font-size: 10px;"><%= link_to "OneiricNews", root_path, :class => 'brand' %></p>
+  </div>
+</div>
+<div style="width: 100%; margin-top: 40px">
+  <div style="margin: auto; width: 950px;">
+    <div style="width: 650px">
+     <span style="font-size: 25px;font-family: Times New Roman;"><%= @art.title %></span><br /> Published by <%= link_to @art.user.name, @art.user.profile %> <%= @art.created_at.strftime("%b. %d, %Y") %> <br />
+  </div>
+</div>
+<div class= "article_image_container">
+  <div class="article_image_wrap">
+
+
+    <div class="writer_articles_container">
+        <p style="text-align: center;font-size: 15px;font-family: Times;">Meet The Writer</p>
+
+
+      <div class="writer_article_wrap">
+        <div class="writer_article_image">
+          <%= image_tag @art.user.profile.image_url.to_s if @art.image? %>
+        </div>
+        <div class="writer_article_name" style="font-family: Times;">
+          <%= truncate(@art.user.bio.content, :length => 200) %> <%= link_to "Writer Profile", @art.user.profile  %>
+        </div>
+      </div>
+
+
+      <div class="article_writer_donate_button">
+        <button class= "btn-large btn-info"><%= link_to "Support the Writer", @art.user.profile, class: "join" %></button>
+      </div>
+
+    </div>
+    <div class="atricle_image">
+      <div class="fadein_article_image">
+        <%= image_tag @art.image_url.to_s if @art.image? %>
+      </div>
+    </div>
+    <div class="social_media_container">
+      <div class="twitter_home">
+        <a href="https://twitter.com/OneiricNews" class="twitter-follow-button" data-show-count="false">Follow @OneiricNews</a>
+        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+      </div>
+      <div class="like_bar">
+        <iframe src="http://www.facebook.com/plugins/like.php?href=http://http://www.facebook.com/oneiric.smith"
+                scrolling="no" frameborder="0"
+                style="border:none; width:450px; height:60px">
+        </iframe>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="story_container">
+  <div class="story_page_wrap">
+  <div class="story_page">
+     <%= simple_format @art.content %>
+    <%= link_to 'Edit', edit_art_path(@art) %> |
+    <%= link_to 'Back', arts_path %>
+  </div>
+    <div class="side_content_wrap">
+      <% @farts.each do |art| %>
+          <div class="recent_article_wrap">
+            <div class="recent_article_image">
+              <%= image_tag art.image_url.to_s if art.image? %>
+            </div>
+            <div class="recent_article_title">
+              <%= link_to "#{art.title}", art %>
+            </div>
+
+          </div>
+      <% end %>
+    </div>
+ </div>
+</div>
+</div>
+
+
+
+
+
+
+

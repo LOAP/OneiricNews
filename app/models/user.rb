@@ -43,6 +43,8 @@ class User < ActiveRecord::Base
   accepts_nested_attributes_for :profile
   has_one :bio, :dependent => :destroy
   accepts_nested_attributes_for :bio
+  # NEWS SECTIONS
+  has_many :arts, :dependent => :destroy, :order => "created_at DESC"
 
   before_save do | user |
     user.profile = Profile.new unless user.profile
